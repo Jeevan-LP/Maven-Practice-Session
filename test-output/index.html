@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-BatchExecutionSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-BatchExecutionSuite" title="ActionClass.Sliders" class="method navigator-link" hash-for-method="testSlider">testSlider</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-BatchExecutionSuite" title="ActionClass.Sliders" class="method navigator-link" hash-for-method="testSlider(org.testng.TestRunner@5b67bb7e)">testSlider(org.testng.TestRunner@5b67bb7e)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-BatchExecutionSuite -->
@@ -126,9 +126,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSlider">
-                  </a> <!-- testSlider -->
+                  <a name="testSlider(org.testng.TestRunner@5b67bb7e)">
+                  </a> <!-- testSlider(org.testng.TestRunner@5b67bb7e) -->
                   <span class="method-name">testSlider</span>
+                  <span class="parameters">(org.testng.TestRunner@5b67bb7e)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,6 +144,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;BatchExecutionSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Utilities.ExtentReportManager&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;ActionClass.Sliders&quot;/&gt;
@@ -189,12 +193,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testSlider')
 data.setCell(0, 2, 'ActionClass.Sliders')
-data.setCell(0, 3, 34296);
+data.setCell(0, 3, 13901);
 window.suiteTableData['BatchExecutionSuite']= { tableData: data, tableDiv: 'times-div-BatchExecutionSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-BatchExecutionSuite">
               </div> <!-- times-div-BatchExecutionSuite -->
             </div> <!-- times-div -->
@@ -222,7 +226,7 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">ActionClass.Sliders</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testSlider</span>
+                <span class="method-name">testSlider(org.testng.TestRunner@5b67bb7e)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

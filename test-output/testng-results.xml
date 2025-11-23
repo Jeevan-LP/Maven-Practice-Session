@@ -2,12 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-23T11:50:21 IST" name="BatchExecutionSuite" finished-at="2025-11-23T11:50:54 IST" duration-ms="33354">
+  <suite started-at="2025-11-23T13:29:59 IST" name="BatchExecutionSuite" finished-at="2025-11-23T13:30:13 IST" duration-ms="14326">
     <groups>
     </groups>
-    <test started-at="2025-11-23T11:50:21 IST" name="Test" finished-at="2025-11-23T11:50:54 IST" duration-ms="33354">
+    <test started-at="2025-11-23T13:29:59 IST" name="Test" finished-at="2025-11-23T13:30:13 IST" duration-ms="14326">
       <class name="ActionClass.Sliders">
-        <test-method signature="testSlider()[pri:0, instance:ActionClass.Sliders@38afe297]" started-at="2025-11-23T11:50:20 IST" name="testSlider" finished-at="2025-11-23T11:50:54 IST" duration-ms="34296" status="PASS">
+        <test-method signature="testSlider(org.testng.ITestContext)[pri:0, instance:ActionClass.Sliders@7bedc48a]" started-at="2025-11-23T13:29:59 IST" name="testSlider" finished-at="2025-11-23T13:30:13 IST" duration-ms="13901" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5b67bb7e]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSlider -->

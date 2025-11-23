@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+<!-- 
+	*If Classes having @Suite Annotations, then it will not execute in class levels
+	*Need to execute same in a XML file	only
+ -->
+  <test thread-count="5" name="Test1">
+  <classes>
+  	  <class name="Annotations.AllAnnotations_01"/>
+      <class name="Annotations.AllAnnotations_02"/>
+  </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Test2">
+  <classes>
+      <class name="Annotations.Testes_Suits"/>
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

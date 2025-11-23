@@ -10,14 +10,14 @@ pipeline {
        🔹 Jenkins Job Parameters
        --------------------------- */
     parameters {
-        choice(name: 'ENV_NAME', choices: ['QA', 'STAGE', 'UAT'], description: 'Select Environment')
-        choice(name: 'BROWSER', choices: ['chrome', 'edge'], description: 'Choose Browser')
-        choice(name: 'SUITE', choices: ['smoke', 'regression'], description: 'Select Test Suite')
-        string(name: 'RUN_BY', defaultValue: 'Jeevan Gowda', description: 'Who triggered the build?')
+        choice(name: 'ENV_NAME', choices: ['QA', 'RELEASE', 'PRODUCTION'], description: 'Select Environment')
+        choice(name: 'BROWSER', choices: ['chrome', 'edge', 'fire fox'], description: 'Choose Browser')
+        choice(name: 'SUITE', choices: ['smoke', 'regression', 'functional'], description: 'Select Test Suite')
+        string(name: 'RUN_BY', defaultValue: 'Appu L P', description: 'Who triggered the build?')
     }	
 
     environment {
-        GIT_REPO    = "https://github.com/Jeevan-LP/In4Suite_Expenses.git"
+        GIT_REPO    = "https://github.com/Jeevan-LP/Maven-Practice-Session.git"
         GIT_BRANCH  = "main"
 
         MAIL_FROM   = "jeevanpgowda27@gmail.com"
@@ -81,20 +81,20 @@ pipeline {
            Stage 4: Publish Extent Report
         --------------------------------------------------------- */
         stage('Publish Extent Report') {
-            steps {
-                echo "Publishing Extent Report..."
+    steps {
+        echo "Publishing Extent Report..."
 
-                archiveArtifacts artifacts: "Results/Reports/*.html", allowEmptyArchive: false
+        archiveArtifacts artifacts: "Reports/*.html", allowEmptyArchive: false
 
-                publishHTML(target: [
-                    reportDir: 'Results/Reports',
-                    reportFiles: '*.html',
-                    reportName: 'Extent Report',
-                    keepAll: true,
-                    alwaysLinkToLastBuild: true
-                ])
-            }
-        }
+        publishHTML(target: [
+            reportDir: 'Reports',
+            reportFiles: '*.html',
+            reportName: 'Extent Report',
+            keepAll: true,
+            alwaysLinkToLastBuild: true
+        ])
+    }
+}
 
         /* ---------------------------------------------------------
            Stage 5: Archive Test Artifacts
@@ -122,7 +122,7 @@ pipeline {
                 subject: "BUILD SUCCESS – ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 mimeType: 'text/html',
                 body: """
-                    <h2 style="color:green;">In4 Suite Automation Build - SUCCESS</h2>
+                    <h2 style="color:green;">Slider Automation Build - SUCCESS</h2>
                     <b>Project :</b> ${env.JOB_NAME}<br>
                     <b>Environment :</b> ${Execution_Environment}<br>
                     <b>Browser :</b> ${Browser}<br>
@@ -151,7 +151,7 @@ pipeline {
                 subject: "BUILD FAILED – ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 mimeType: 'text/html',
                 body: """
-                    <h2 style="color:red;">In4 Suite Automation Build - FAILED</h2>
+                    <h2 style="color:red;">Slider Automation Build - FAILED</h2>
                     <b>Project :</b> ${env.JOB_NAME}<br>
                     <b>Environment :</b> ${Execution_Environment}<br>
                     <b>Browser :</b> ${Browser}<br>
