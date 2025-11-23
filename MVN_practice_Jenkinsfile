@@ -50,7 +50,7 @@ pipeline {
         --------------------------------------------------------- */
         stage('Checkout Code From GitHub') {
             steps {
-                echo "Checking out source code..."
+                echo "Checking out source code....."
                 git branch: "${GIT_BRANCH}",
                     credentialsId: 'git-creds',
                     url: "${GIT_REPO}"
@@ -62,7 +62,7 @@ pipeline {
         --------------------------------------------------------- */
         stage('Build Framework') {
             steps {
-                echo "Building framework..."
+                echo "Building framework....."
                 bat "mvn clean install -DskipTests"
             }
         }
@@ -82,7 +82,7 @@ pipeline {
         --------------------------------------------------------- */
         stage('Publish Extent Report') {
     steps {
-        echo "Publishing Extent Report..."
+        echo "Publishing Extent Report....."
 
         archiveArtifacts artifacts: "Reports/*.html", allowEmptyArchive: false
 
@@ -101,7 +101,7 @@ pipeline {
         --------------------------------------------------------- */
         stage('Archive Test Artifacts') {
             steps {
-                echo "Archiving test reports..."
+                echo "Archiving test reports....."
                 junit allowEmptyResults: true, testResults: "target/surefire-reports/*.xml"
                 archiveArtifacts artifacts: "target/**/*.*", allowEmptyArchive: true
             }
@@ -114,7 +114,7 @@ pipeline {
     post {
 
         success {
-            echo "✔ Build Successful"
+            echo "✔ Build Successful....."
 
             emailext(
                 from: "${MAIL_FROM}",
@@ -122,6 +122,10 @@ pipeline {
                 subject: "BUILD SUCCESS – ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 mimeType: 'text/html',
                 body: """
+                <br><b>Hello Team,</b><br><br>
+                
+                <br><b>The latest automation build has been executed. Please find the build summary below:</b><br><br>
+                
                     <h2 style="color:green;">Slider Automation Build - SUCCESS</h2>
                     <b>Project :</b> ${env.JOB_NAME}<br>
                     <b>Environment :</b> ${Execution_Environment}<br>
@@ -143,7 +147,7 @@ pipeline {
         }
 
         failure {
-            echo "❌ Build Failed"
+            echo "❌ Build Failed....."
 
             emailext(
                 from: "${MAIL_FROM}",
@@ -151,6 +155,10 @@ pipeline {
                 subject: "BUILD FAILED – ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 mimeType: 'text/html',
                 body: """
+                <br><b>Hello Team,</b><br><br>
+                
+                <br><b>The latest automation build has been Failed. Please find the build summary below:</b><br><br>
+                
                     <h2 style="color:red;">Slider Automation Build - FAILED</h2>
                     <b>Project :</b> ${env.JOB_NAME}<br>
                     <b>Environment :</b> ${Execution_Environment}<br>
