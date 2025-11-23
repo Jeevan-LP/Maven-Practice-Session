@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-23T12:03:41 IST" name="BatchExecutionSuite" finished-at="2025-11-23T12:03:55 IST" duration-ms="14166">
+  <suite started-at="2025-11-23T12:13:13 IST" name="BatchExecutionSuite" finished-at="2025-11-23T12:13:39 IST" duration-ms="25316">
     <groups>
     </groups>
-    <test started-at="2025-11-23T12:03:41 IST" name="Test" finished-at="2025-11-23T12:03:55 IST" duration-ms="14166">
+    <test started-at="2025-11-23T12:13:13 IST" name="Test" finished-at="2025-11-23T12:13:39 IST" duration-ms="25316">
       <class name="ActionClass.Sliders">
-        <test-method signature="testSlider()[pri:0, instance:ActionClass.Sliders@5ffead27]" started-at="2025-11-23T12:03:41 IST" name="testSlider" finished-at="2025-11-23T12:03:55 IST" duration-ms="14108" status="PASS">
+        <test-method signature="testSlider()[pri:0, instance:ActionClass.Sliders@2a3b5b47]" started-at="2025-11-23T12:13:13 IST" name="testSlider" finished-at="2025-11-23T12:13:39 IST" duration-ms="25268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSlider -->
