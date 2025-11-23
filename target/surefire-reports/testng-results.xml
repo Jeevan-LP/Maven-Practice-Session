@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-23T11:51:17 IST" name="BatchExecutionSuite" finished-at="2025-11-23T11:51:35 IST" duration-ms="17775">
+    <groups>
+    </groups>
+    <test started-at="2025-11-23T11:51:17 IST" name="Test" finished-at="2025-11-23T11:51:35 IST" duration-ms="17775">
+      <class name="ActionClass.Sliders">
+        <test-method signature="testSlider()[pri:0, instance:ActionClass.Sliders@18078bef]" started-at="2025-11-23T11:51:17 IST" name="testSlider" finished-at="2025-11-23T11:51:35 IST" duration-ms="17713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSlider -->
+      </class> <!-- ActionClass.Sliders -->
+    </test> <!-- Test -->
+  </suite> <!-- BatchExecutionSuite -->
+</testng-results>

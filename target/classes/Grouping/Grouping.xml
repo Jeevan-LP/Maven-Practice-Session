@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GroupingSuite">
+
+<test thread-count="5" name="GroupingTest">
+  
+   <groups>
+   <run>
+   		   <!--All Sanity -->
+   		   <!--
+           <include name="Sanity"></include> 
+           -->
+          
+           <!--All Regression -->
+           <!--
+           <include name="Regression"></include> 
+           -->
+           
+           <!--All Sanity but not Regression -->
+           <!--
+           <include name="Sanity"></include> 
+           <exclude name="Regression"></exclude>
+           -->
+           
+           <!--All Regression but not Sanity -->
+           <!--
+           <include name="Regression"></include> 
+           <exclude name="Sanity"></exclude>
+           -->
+           
+           <!-- Both Sanity and Regression -->
+		   <include name="Functional"></include>           
+           
+   </run>
+   </groups> 
+   
+   	  <classes>
+      <class name="Grouping.LoginTest"/>
+      <class name="Grouping.ChatTest"/>
+      <class name="Grouping.LogoutTest"/>
+      <class name="Grouping.GroupingTesting"/>
+    
+   </classes>
+  </test> <!-- Test -->
+
+<!-- 
+All Classes Execution
+<test name="AllExecution">
+<classes>
+
+<class name="Grouping.ChatTest"/>
+<class name="Grouping.GroupingTesting"/>
+<class name="Grouping.LoginTest"/>
+<class name="Grouping.LogoutTest"/>
+
+</classes>
+</test> 
+-->
+  
+  
+</suite> <!-- Suite -->

@@ -1,104 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-19T17:36:26 IST" name="Suite" finished-at="2025-07-19T17:36:51 IST" duration-ms="24927">
+  <suite started-at="2025-11-23T11:50:21 IST" name="BatchExecutionSuite" finished-at="2025-11-23T11:50:54 IST" duration-ms="33354">
     <groups>
     </groups>
-    <test started-at="2025-07-19T17:36:26 IST" name="Test" finished-at="2025-07-19T17:36:51 IST" duration-ms="24927">
-      <class name="ListenerReport.TestCase">
-        <test-method signature="Launching()[pri:1, instance:ListenerReport.TestCase@359f7cdf]" started-at="2025-07-19T17:36:26 IST" name="Launching" finished-at="2025-07-19T17:36:39 IST" duration-ms="12338" status="PASS">
+    <test started-at="2025-11-23T11:50:21 IST" name="Test" finished-at="2025-11-23T11:50:54 IST" duration-ms="33354">
+      <class name="ActionClass.Sliders">
+        <test-method signature="testSlider()[pri:0, instance:ActionClass.Sliders@38afe297]" started-at="2025-11-23T11:50:20 IST" name="testSlider" finished-at="2025-11-23T11:50:54 IST" duration-ms="34296" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launching -->
-        <test-method signature="Login()[pri:2, instance:ListenerReport.TestCase@359f7cdf]" started-at="2025-07-19T17:36:39 IST" name="Login" finished-at="2025-07-19T17:36:42 IST" duration-ms="3690" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="Help()[pri:4, instance:ListenerReport.TestCase@359f7cdf]" started-at="2025-07-19T17:36:42 IST" name="Help" finished-at="2025-07-19T17:36:45 IST" duration-ms="2488" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [[[ChromeDriver: chrome on windows (389e94134b37118715c6e097d57c385d)] -> xpath: //i[@class='oxd-icon bi-question-lg']]]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [[[ChromeDriver: chrome on windows (389e94134b37118715c6e097d57c385d)] -> xpath: //i[@class='oxd-icon bi-question-lg']]]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:644)
-at ListenerReport.TestCase.Help(TestCase.java:38)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Help -->
-        <test-method signature="Upgrade()[pri:5, instance:ListenerReport.TestCase@359f7cdf]" started-at="2025-07-19T17:36:45 IST" name="Upgrade" finished-at="2025-07-19T17:36:45 IST" depends-on-methods="ListenerReport.TestCase.Help" duration-ms="1" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method ListenerReport.TestCase.Upgrade() on instance ListenerReport.TestCase@359f7cdf depends on not successfully finished methods 
-[ListenerReport.TestCase.Help() on instance ListenerReport.TestCase@359f7cdf]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method ListenerReport.TestCase.Upgrade() on instance ListenerReport.TestCase@359f7cdf depends on not successfully finished methods 
-[ListenerReport.TestCase.Help() on instance ListenerReport.TestCase@359f7cdf]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upgrade -->
-        <test-method signature="Logout()[pri:6, instance:ListenerReport.TestCase@359f7cdf]" started-at="2025-07-19T17:36:45 IST" name="Logout" finished-at="2025-07-19T17:36:51 IST" duration-ms="5933" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-      </class> <!-- ListenerReport.TestCase -->
+        </test-method> <!-- testSlider -->
+      </class> <!-- ActionClass.Sliders -->
     </test> <!-- Test -->
-  </suite> <!-- Suite -->
+  </suite> <!-- BatchExecutionSuite -->
 </testng-results>
